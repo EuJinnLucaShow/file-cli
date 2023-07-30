@@ -5,8 +5,7 @@ const dataValidator = require('./helpers/dataValidator')
 const checkExtension = require('./helpers/checkExtension')
 
 const creatFile = async (filename, content) => {
-    const file =
-    { 
+    const file = { 
         filename,
         content
     }
@@ -51,6 +50,9 @@ const getInfo = async (filename) => {
     const pathFile = path.join(__dirname, 'files', filename )
     const infoData = await fs.readFile(pathFile, 'utf8')
     console.log(infoData)
+    
+    
+
 }
 
 module.exports = {

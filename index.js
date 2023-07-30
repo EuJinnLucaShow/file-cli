@@ -4,8 +4,7 @@ const { creatFile, getFiles, getInfo } = require('./files')
 function invokeAction({ action, filename, content }) {
   switch (action) {
     case 'create':
-      creatFile(filename, content)
-          
+      creatFile(filename, content)          
       break;
 
     case 'get':
