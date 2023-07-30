@@ -1,0 +1,17 @@
+{
+  "name": "file-sli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "joi": "^17.9.2",
+    "yargs": "^17.7.2"
+  }
+}
