@@ -1,23 +1,15 @@
-const argv = require('yargs').argv;
-const { creatFile, getFiles, getInfo } = require('./files')
+const morgan = require('morgan')
+const express = require('express');
+const app = express();
 
-function invokeAction({ action, filename, content }) {
-  switch (action) {
-    case 'create':
-      creatFile(filename, content)          
-      break;
+const router = require('./router')
 
-    case 'get':
-      getFiles()
-      break;
+app.use(morgan('tiny'))
 
-    case 'getInfo':
-      getInfo(filename)
-      break;    
+app.use(express.json())
 
-    default:
-      console.warn('\x1B[31m Unknown action type!');
-  }
-}
+app.use('/files', router)
 
-invokeAction(argv);
+app.listen(3000, () => { 
+  console.log('server run')
+} )
