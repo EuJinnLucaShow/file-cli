@@ -10,6 +10,4 @@ router.get('/', getFiles);
 
 router.get('/:filename', getInfo);
 
-
-
 module.exports = router;
